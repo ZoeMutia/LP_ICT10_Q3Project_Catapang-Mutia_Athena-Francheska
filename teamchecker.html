@@ -113,15 +113,15 @@
     }
 
     .success {
-        background: #e8fff3;
+        background: none;
         color: #2e7d32;
-        border: 2px dashed #8fd3f4;
+        border: none;
     }
 
     .error {
-        background: #fff0f4;
+        background: none;
         color: #c62828;
-        border: 2px dashed #ff9acb;
+        border: none;
     }
 </style>
 </head>
@@ -203,7 +203,7 @@ function checkEligibility() {
 
         resultBox.className = "result success";
         resultBox.innerHTML =
-            "Congratulations! You are eligible for Intramurals!<br><br>" +
+            "You are eligible for Intramurals!<br><br>" +
             "Your team is: <strong>" + randomTeam + "</strong>";
 
     } else {
@@ -211,13 +211,13 @@ function checkEligibility() {
         resultBox.className = "result error";
 
         if (registration !== "yes") {
-            resultBox.innerHTML = "Please register online first.";
+            resultBox.innerHTML = "Please choose a field.";
         }
         else if (medical !== "yes") {
-            resultBox.innerHTML = "Please secure your medical clearance.";
+            resultBox.innerHTML = "Please choose a field.";
         }
         else if (grade < 7 || grade > 10) {
-            resultBox.innerHTML = "Only Grades 7 to 10 are allowed to join Intramurals.";
+            resultBox.innerHTML = "Please choose a field.";
         }
         else {
             resultBox.innerHTML = "Please complete all requirements.";
